@@ -26,6 +26,7 @@ public class DemoTest {
 		emp.setSalary(salary);
 		result = es.storeEmployee(emp);
 				System.out.println(result);
+				//test comment
 	}
 
 	}
