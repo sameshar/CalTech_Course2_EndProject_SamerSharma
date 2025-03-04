@@ -10,7 +10,9 @@
 <h1>Zumba App</h1>
 <a href="register.jsp">Register</a>
 <a href="viewSchedulePage.jsp">SignUp for a Class</a>
-<a href="viewSchedulePage.jsp">View Schedule</a>
+<a href="viewSchedulePage.jsp">My Account</a>
+<a href="viewSchedulePage.jsp">View Upcoming Classes</a>
+<a href="viewSchedulePage.jsp">My Classes</a>
 
 </body>
 </html>
