@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
@@ -8,6 +9,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import bean.Participants;
 
 /**
  * Servlet implementation class ParticipantController
@@ -31,19 +34,7 @@ public class ParticipantController extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		PrintWriter out = response.getWriter();
-        
-        try {
-            String name = request.getParameter("name");
-            String email = request.getParameter("email");
-            String pnumber = request.getParameter("pnumber");
-
-            out.println("Thanks for registering "+ name);
-            System.out.println(name);
-        }
-        finally {
-        	System.out.println("finally block");
-        }
+		
 	}
 
 	/**
@@ -51,7 +42,16 @@ public class ParticipantController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+		PrintWriter out = response.getWriter();
+        	String pname = request.getParameter("pname");
+            String email = request.getParameter("email");
+            String pnumber = request.getParameter("pnumber");
+//            p1.setpname(pname);
+//            p1.setemail(email);
+//            p1.setpnumber(pnumber);
+ //           out.println("Thanks for registering "+ p1.pname);
+            System.out.println(email);
+            System.out.println(pnumber);
+  
 
-}
+}}

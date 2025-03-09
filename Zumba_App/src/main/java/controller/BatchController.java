@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,7 +37,13 @@ public class BatchController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		PrintWriter out = response.getWriter();
+    	String bid = request.getParameter("bid");
+        String weekday = request.getParameter("weekday");
+        String time = request.getParameter("time");
+        System.out.println(bid);
+        System.out.println(weekday);
+        System.out.println(time);
 	}
 
 }

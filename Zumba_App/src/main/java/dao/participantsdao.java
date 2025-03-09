@@ -12,7 +12,7 @@ public class participantsdao {
 	    String username = "root";
 	    String password = "Sameer1!";
 	    
-	    Connection connection = null;
+	    Connection connection = "null";
 	    
 	    try {
 	        // Establishing the connection

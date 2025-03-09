@@ -1,34 +1,44 @@
 package bean;
 
 public class Participants {
-	int pId;
-	String pName;
+	public String pname;
 	String email;
-	int pnumber;
-	public int getpId() {
-		return pId;
+	String pnumber;
+
+//Getters and Setters
+	public String getpname() {
+		return pname;
 	}
-	public void setpId(int pId) {
-		this.pId = pId;
+	public void setpname(String pname) {
+		this.pname = pname;
 	}
-	public String getpName() {
-		return pName;
-	}
-	public void setpName(String pName) {
-		this.pName = pName;
-	}
-	public String getEmail() {
+	public String getemail() {
 		return email;
 	}
-	public void setEmail(String email) {
+	public void setemail(String email) {
 		this.email = email;
 	}
-	public int getPnumber() {
+	public String getpnumber() {
 		return pnumber;
 	}
-	public void setPnumber(int pnumber) {
+	public void setpnumber(String pnumber) {
 		this.pnumber = pnumber;
 	}
+	
+//Constructors
+	public Participants() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+public Participants(String pname, String email, String pnumber) {
+	super();
+	this.pname = pname;
+	this.email = email;
+	this.pnumber = pnumber;
+}
+
+
+	
 	
 	
 	

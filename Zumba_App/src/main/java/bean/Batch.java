@@ -1,13 +1,13 @@
 package bean;
 
 public class Batch {
-	int bId;
+	String bId;
 	String weekday;
 	String time;
-	public int getbId() {
+	public String getbId() {
 		return bId;
 	}
-	public void setbId(int i) {
+	public void setbId(String i) {
 		this.bId = i;
 	}
 	public String getWeekday() {
