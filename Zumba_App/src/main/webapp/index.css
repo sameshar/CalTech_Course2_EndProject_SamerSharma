@@ -5,10 +5,12 @@ body {
 	padding: 0;
 	color: #333;
 	line-height: 1.6;
+	
 }
 
 div {
 	text-align: center;
+	padding: 10px;
 }
 
 h1, h2, h3 {
@@ -147,3 +149,10 @@ table tr:hover {
 	background: #f1f1f1;
 }
 
+p {
+	text-align: center;
+}
+
+tr {
+	text-align: center;
+}

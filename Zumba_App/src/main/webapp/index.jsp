@@ -10,8 +10,8 @@
 <body>
 	<h1>Zumba App</h1>
 	<div><a href="register.jsp">Register</a><br></div>
-	<div><a href="ViewParticipants.jsp">View Participants</a><br></div>
-	<div><a href="viewSchedulePage.jsp">View Classes</a><br></div>
+	<div><a href="ParticipantController">View Participants</a><br></div>
+	<div><a href="BatchController">View Classes</a><br></div>
 	<div><a href="addbatch.jsp">Add Classes</a></div>
 
 </body>

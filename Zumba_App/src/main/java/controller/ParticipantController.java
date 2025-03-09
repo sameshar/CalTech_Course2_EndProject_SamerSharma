@@ -3,6 +3,7 @@ package controller;
 import java.io.IOException;
 
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -52,6 +53,7 @@ public class ParticipantController extends HttpServlet {
  //           out.println("Thanks for registering "+ p1.pname);
             System.out.println(email);
             System.out.println(pnumber);
+            response.getWriter().append("form submitted");
   
 
 }}

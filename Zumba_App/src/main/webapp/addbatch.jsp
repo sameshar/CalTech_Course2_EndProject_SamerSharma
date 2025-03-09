@@ -9,8 +9,8 @@
 </head>
 <body>
 	<h1>Add batch here</h1>
-	<h3>Add new batch information here</h3>
-	<form action="BatchController" method="post">
+	<p>Register here for begin your Zumba journey</p>
+	<form action="BatchController" method="post" name="bform">
 		<label>Batch ID</label> 
 		<input type="text" id="bid" name="bid"> 
 	

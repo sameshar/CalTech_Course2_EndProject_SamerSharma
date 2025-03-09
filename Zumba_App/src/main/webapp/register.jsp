@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>Signup</h1>
-	<h3>Register here for begin your Zumba journey</h3>
+	<p>Register here for begin your Zumba journey</p>
 	<form action="ParticipantController" method="post">
 		<label>Name</label> 
 		<input type="text" id="pname" name="pname"> 
