@@ -125,19 +125,19 @@ button:disabled {
 
 /* Tables */
 table {
-	width: 100%;
+	width: auto;
 	border-collapse: collapse;
-	margin: 20px 0;
+	
 }
 
-table thead {
+th {
 	background: #ff5733;
 	color: white;
 }
 
-table th, table td {
+table td {
 	padding: 10px;
-	text-align: left;
+    text-align: center;
 	border: 1px solid #ccc;
 }
 
@@ -153,6 +153,5 @@ p {
 	text-align: center;
 }
 
-tr {
-	text-align: center;
-}
+
+

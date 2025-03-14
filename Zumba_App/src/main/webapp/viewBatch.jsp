@@ -29,6 +29,7 @@
         %>
 </table>
 <hr>
+<table>
 	<tr>
 		<th>Batch Id</th>
 		<th>Weekday</th>
@@ -41,8 +42,13 @@
 			<td><core:out value="${batch.getTime()}"></core:out> </td>
 		</tr>
 	</core:forEach>
-
+</table>
 <br/>
-<a href="index.jsp">Back</a>
+<a href="index.jsp">← Back</a>
+<br>
+<br>
+<br>
+<br>
+<br>
 </body>
 </html>

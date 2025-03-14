@@ -1,11 +1,20 @@
 package bean;
 
 public class Participants {
+	String pid;
 	public String pname;
 	String email;
 	String pnumber;
 
 //Getters and Setters
+
+	public String getPid() {
+		return pid;
+	}
+	public void setPid(String pid) {
+		this.pid = pid;
+	}
+	
 	public String getpname() {
 		return pname;
 	}
@@ -30,12 +39,15 @@ public class Participants {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-public Participants(String pname, String email, String pnumber) {
+public Participants(String pid, String pname, String email, String pnumber) {
 	super();
+	this.pid = pid;
 	this.pname = pname;
 	this.email = email;
 	this.pnumber = pnumber;
 }
+
+	
 
 
 	

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import bean.Participants;
+import dao.participantsdao;
 
 /**
  * Servlet implementation class ParticipantController
@@ -28,6 +30,8 @@ public class ParticipantController extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
+    
+    participantsdao pd = new participantsdao();
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -47,10 +51,18 @@ public class ParticipantController extends HttpServlet {
         	String pname = request.getParameter("pname");
             String email = request.getParameter("email");
             String pnumber = request.getParameter("pnumber");
-//            p1.setpname(pname);
-//            p1.setemail(email);
-//            p1.setpnumber(pnumber);
- //           out.println("Thanks for registering "+ p1.pname);
+
+            Participants participant = new Participants();
+            participant.setpname(pname);
+            participant.setemail(email);
+            participant.setpnumber(pnumber);
+            
+            pd.storeParticipantinfo(participant);
+            
+            RequestDispatcher rd = request.getRequestDispatcher("register.jsp");
+    		rd.include(request, response);
+    		response.setContentType("text/html");
+    		
             System.out.println(email);
             System.out.println(pnumber);
             response.getWriter().append("form submitted");

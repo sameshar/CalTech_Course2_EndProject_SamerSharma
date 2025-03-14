@@ -1,37 +1,30 @@
 package dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.PreparedStatement;
+
+import bean.Participants;
+import resource.DBResource;
 
 public class participantsdao {
-		
-		//db connection
 	
-		String jdbcURL = "jdbc:mysql://localhost:3306/Zumba";
-	    String username = "root";
-	    String password = "Sameer1!";
-	    private static Connection con;
-	    
-	    
-	    try {
-	        // Establishing the connection
-	        con = DriverManager.getConnection(jdbcURL, username, password);
-	        System.out.println("Connection established successfully!");
-
-	    } catch (SQLException e) {
-	        // Handling SQL exception
-	        System.out.println("Error while connecting to the database.");
-	        e.printStackTrace();
-	    } finally {
-	        // Closing the connection
-	        if (con != null) {
-	            try {
-	                con.close();
-	                System.out.println("Connection closed.");
-	            } catch (SQLException e) {
-	                System.out.println("Error while closing the connection.");
-	                e.printStackTrace();
-	            }
+	
+	
+	public int storeParticipantinfo(Participants participant) {
 		
-	}}}}
+		try {
+		Connection con = DBResource.getDbConnection();
+		PreparedStatement pstmt1 = con.prepareStatement("insert into participants (name, email, pnumber) values(?,?,?)");	// as string format 
+		pstmt1.setString(1, participant.getpname());
+		pstmt1.setString(2, participant.getemail());
+		pstmt1.setString(3, participant.getpnumber());
+		System.out.println("end of try block on participantDAO");
+		return pstmt1.executeUpdate();
+		
+		} catch (Exception e) {
+			System.err.println(e.toString());
+			return 0;
+		}
+	}
+	
+	}

@@ -66,7 +66,6 @@ public class BatchController extends HttpServlet {
         
         System.out.println(bid);
         System.out.println(weekday);
-        System.out.println(time);
         
                 
         Batch bb = new Batch();

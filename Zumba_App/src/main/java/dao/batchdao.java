@@ -8,10 +8,6 @@ import java.util.List;
 
 import resource.DBResource;
 
-
-
-import org.apache.catalina.realm.UserDatabaseRealm;
-
 import bean.Batch;
 
 public class batchdao {
