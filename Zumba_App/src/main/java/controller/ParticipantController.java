@@ -3,6 +3,7 @@ package controller;
 import java.io.IOException;
 
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -11,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import bean.Participants;
 import dao.participantsdao;
@@ -30,14 +32,21 @@ public class ParticipantController extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-    
     participantsdao pd = new participantsdao();
+    
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		System.out.println("Controller goGet Method");
+		
+		ArrayList<Participants> participantsList1 = pd.viewParticipants();
+		HttpSession hs = request.getSession();
+		hs.setAttribute("ParticipantsName", participantsList1);
+		
+		response.sendRedirect("ViewParticipants.jsp");
+		
 		
 		
 	}
@@ -65,7 +74,7 @@ public class ParticipantController extends HttpServlet {
     		
             System.out.println(email);
             System.out.println(pnumber);
-            response.getWriter().append("form submitted");
+            response.getWriter().append("Thank you " + pname + ". The form is submitted");
   
 
 }}

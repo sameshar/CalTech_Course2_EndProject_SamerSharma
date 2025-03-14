@@ -11,24 +11,7 @@
 </head>
 <body>
 	<h1>Zumba classes schedule</h1>
-	<table border="1">
-	<% 
-           java.util.ArrayList<String> activities = (java.util.ArrayList<String>) request.getAttribute("batches");
 
-	// Check if the list is not null or empty
-    if (activities != null && !activities.isEmpty()) {
-        for (String activity : activities) {
-%>
-    <li><%= activity %></li>
-<% 
-        }
-    } else { 
-%>
-    <li>No activities to display.</li>
-<% }
-        %>
-</table>
-<hr>
 <table>
 	<tr>
 		<th>Batch Id</th>

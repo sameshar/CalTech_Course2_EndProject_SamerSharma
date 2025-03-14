@@ -2,7 +2,7 @@ package bean;
 
 public class Participants {
 	String pid;
-	public String pname;
+	String pname;
 	String email;
 	String pnumber;
 

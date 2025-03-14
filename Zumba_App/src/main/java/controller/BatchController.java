@@ -40,9 +40,8 @@ public class BatchController extends HttpServlet {
 		bd.viewAllBatch();
 		//System.err.println(bd.viewAllBatch());
 		List<Batch> listOfBatch = bd.viewAllBatch();
-		System.out.println(listOfBatch.get(0));
+		System.out.println(listOfBatch);
 		HttpSession hs = request.getSession();
-		//hs.setAttribute("batches", listOfBatch);
 		hs.setAttribute("batches", listOfBatch);
 		
 		response.sendRedirect("viewBatch.jsp");
