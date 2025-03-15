@@ -30,5 +30,8 @@
 		<button type="submit">Register</button>
 		<button type="reset">Clear</button>
 	</form>
+	
+	<a href="index.jsp">← Back</a>
+
 </body>
 </html>

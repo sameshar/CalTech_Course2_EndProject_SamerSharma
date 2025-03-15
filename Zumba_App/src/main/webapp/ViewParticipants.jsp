@@ -27,5 +27,8 @@
             </tr>
         </core:forEach>
 	</table>
+	<br>
+	<br>
+	<a href="index.jsp">← Back</a>
 </body>
 </html>
